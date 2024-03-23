@@ -8,9 +8,9 @@ Use case is almost the same with 'Dapper'. It has 3 layered Backend structure fo
 ## **4 Layered DataAccess Backend Pattern**
 
 ### **First Layer - AdonetMapper.cs Layer**
-. This is a 'Dapper' like Adonet extension class for stored procedure database transactions. 
-. Includes no raw query transactions because of bussiness rule indicates "only usage of stored procedure methods" but raw query transactions can be addded. 
-. It extends adonet classes (such as DbConnection, SqlCommand, SqlDataAdapter etc) to get datas then map datas into generic objects provided by outside.
+- This is a 'Dapper' like Adonet extension class for stored procedure database transactions. 
+- Includes no raw query transactions because of bussiness rule indicates "only usage of stored procedure methods" but raw query transactions can be addded. 
+- It extends adonet classes (such as DbConnection, SqlCommand, SqlDataAdapter etc) to get datas then map datas into generic objects provided by outside.
 
 ### **Second Layer - AdonetDataProvider.cs Layer**
 This Provider class have to include AdonetMapper.cs to extend DbConnection or SqlConnection classes to gain access data from Database and Stored Procedure Methods with custom bussiness rules.
