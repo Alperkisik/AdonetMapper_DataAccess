@@ -1,10 +1,10 @@
-# $\textcolor{purple}{\textsf{AdonetMapper DataAccess Class Library Based on Stored Procedure}}$
+# **$\textcolor{purple}{\textbf{AdonetMapper DataAccess Class Library Based on Stored Procedure}}$**
 - AdonetMapper is a custom basic ORM Basic 'Dapper' like Adonet class library targeting for Stored Procedure based Database transactions.
 - <span style="color:red;">**Aim of this project**</span> => Gain Access data from Stored Procedure Methods with Adonet transactions and organizing them with related Tables and Dto's in c# class libraries for easy organized use cases.
 - Base organized use case code pattern =>  "dataAccess.{Your Table name or Dto Name}.{Related Stored Procedure Method Name}"
 - Use case is almost the same with 'Dapper'. It has 3 layered Backend structure for .
 
-## **4 Layered DataAccess Backend Pattern**
+## **$\textcolor{purple}{\textbf{4 Layered DataAccess Backend Pattern}}$**
 
 ### **First Layer - AdonetMapper.cs Layer**
 - This is a 'Dapper' like Adonet extension class for stored procedure database transactions. 
