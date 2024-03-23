@@ -12,11 +12,13 @@ namespace AdonetMapper_DataAccess.Repository
         {
         }
 
+        //Select_Student is a Stored Procedure Method Name Related with Student Table
         public async Task<IEnumerable<Student>> Select_Student()
         {
             return await MultipleRowAsync<Student>();
         }
 
+        //Select_Student is a Stored Procedure Method Name Related with Student Table
         public async Task<IEnumerable<Student>> Select_Student(Student model)
         {
             //May want to use different validation approach here or somewhere else
@@ -24,7 +26,9 @@ namespace AdonetMapper_DataAccess.Repository
             var validationResult = Utilities.Validation(model);
             if (validationResult.IsFailure) throw new ArgumentException(validationResult.Error);
 
-            return await MultipleRowAsync<Student>(parameters: Utilities.SqlParameters_FromObject(model));
+            return await MultipleRowAsync<Student>(
+                parameters: Utilities.SqlParameters_FromObject(model),
+                schema: "dbo");
         }
     }
 }
