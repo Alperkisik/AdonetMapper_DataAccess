@@ -17,10 +17,7 @@ namespace AdonetMapper_DataAccess
     public abstract class AdonetDataProvider
     {
         readonly string _connectionString;
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="ConnectionString"></param>
+  
         public AdonetDataProvider(string ConnectionString)
         {
             _connectionString = ConnectionString;
