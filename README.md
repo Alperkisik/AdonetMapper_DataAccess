@@ -1,4 +1,4 @@
-<code style="color : #1589F0">text</code>
+<code style="color : aqua">text</code>
 # **AdonetMapper DataAccess Class Library Based on Stored Procedure**
 
 - AdonetMapper is a custom basic ORM Basic 'Dapper' like Adonet class library targeting for Stored Procedure based Database transactions.
