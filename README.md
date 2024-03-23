@@ -1,9 +1,11 @@
-# **AdonetMapper DataAccess Class Library**
+# **AdonetMapper DataAccess Class Library Based on Stored Procedure**
 
 AdonetMapper is a custom basic ORM Basic 'Dapper' like Adonet class library targeting for Stored Procedure based Database transactions.
-Use case is almost the same.
+Aim of this project => Gain Access data from Stored Procedure Methods with Adonet transactions and organizing them with related Tables and Dto's in c# class libraries for easy organized use cases.
+Base organized use case code pattern =>  "dataAccess.{Your Table name or Dto Name}.{Related Stored Procedure Method Name}"
+Use case is almost the same with 'Dapper'. It has 3 layered Backend structure for .
 
-## **BackEnd Layout Based on 3 Layers**
+## **3 Layered DataAccess Backend Pattern**
 
 ### **First Layer - AdonetDataProvider.cs Layer**
 This Provider class have to include AdonetMapper.cs to extend DbConnection or SqlConnection classes to access data from Database Stored Procedure Methods with custom bussiness rules.
@@ -11,7 +13,9 @@ AdonetDataProvider methods gets caller method names (like [CallerMemberName] str
 
 
 ### **Second Layer - Repository.cs Layer**
-This layer presents Stored Procedure Methods related with Dto Models. For example, if database has Student table and Stored Procedure Methods related with Student table like Select_Students ( returns Student records based on parameters ), create a repository layer based on that in this case repository named "StudentRepository" or "Student_SPPM" (SPPM => Stored Procedure Method Library) inherited from AdonetDataProvider. Then add Stored Procedure Methods as C# methods like Ienumerable<Student> Select_Students(object parameters) then inside the method call base methods comes from AdonetDataProvider.
+This layer presents Stored Procedure Methods related with Dto Models. 
+For example, create a repository layer based on that in this case repository named "StudentRepository" or "Student_SPPM" (SPPM => Stored Procedure Method Library) inherited from AdonetDataProvider , if database has Student table and Stored Procedure Methods related with Student table like Select_Students ( returns Student records based on parameters ). 
+Then add Stored Procedure Methods as C# methods like Ienumerable<Student> Select_Students(object parameters) "Select_Students name represents Stored Procedure Name" then inside the method call base methods comes from AdonetDataProvider.
 This layer is also be used as validating your parameters (like in Bussiness Layers) or converting parameters to proper types for AdonetDataProvider methods. Only one thing is certainly required that is validating parameters somewhere before calling AdonetDataProvider methods because Stored Procedure Method has parameters with limits and accepts only with same named parameters.
 
 ### **Third Layer - DataAccess.cs Layer**
