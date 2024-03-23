@@ -1,4 +1,4 @@
-@@ \color{purple}text in purple (and bold)@@
+$\textcolor{red}{\textsf{lorem ipsum}}$
 # **AdonetMapper DataAccess Class Library Based on Stored Procedure**
 
 - AdonetMapper is a custom basic ORM Basic 'Dapper' like Adonet class library targeting for Stored Procedure based Database transactions.
