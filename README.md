@@ -29,7 +29,7 @@
 - Pattern => "dataAccess.{Your Table name or Dto Name}.{Related Stored Procedure Method Name}".
 - Aim of this pattern is organizing your Stored Procedure Methods with related Tables or Dto classes.
 
-Example Code UseCase =>
+- $\textcolor{#3f37C9}{\textsf{Example Code UseCase =>}}$
 ```csharp
 DataAccess storedProcedureMethodLibrary = new DataAccess(connectionString);
 
